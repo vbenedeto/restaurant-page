@@ -1,7 +1,7 @@
 
 export function loadHome() {
   const content = document.querySelector("#content");
-  content.classList.remove("menu-page");
+  content.className = "";
   content.classList.add("home-page");
   content.innerHTML = "";
 

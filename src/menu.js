@@ -15,7 +15,7 @@ const menuItems = [
   {
     name: "Pão de Queijo",
     image: paoDeQueijo, 
-    info: "Queijo	Warm, chewy, and irresistibly cheesy. Traditional gluten-free bread rolls made with tapioca flour and cured cheese. A staple of Minas Gerais (Portion of 11)",
+    info: "Queijo	Warm, chewy, and irresistibly cheesy. Traditional gluten-free bread rolls made with tapioca flour and cured cheese. A staple of Minas Gerais <i>(Portion of 11)</i>",
     price: "€6.50",
   },
   {
@@ -56,7 +56,7 @@ function createMenuItem(item) {
   image.alt = item.name;
 
   const info = document.createElement("p");
-  info.textContent = item.info;
+  info.innerHTML = item.info;
   info.classList.add("info");
 
   const price = document.createElement("p");
@@ -70,7 +70,7 @@ function createMenuItem(item) {
 export function loadMenu() {
   const content = document.querySelector("#content");
   content.innerHTML = "";
-  content.classList.remove("home-page");
+  content.className = "";
   content.classList.add("menu-page");
 
   menuItems.forEach((item) => {

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 body {
@@ -16,9 +17,21 @@ body {
   background-position: center;
 }
 
+.main-title {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Header */
+
 header {
   width: 100%;
   background-color: #00000099;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 header>nav {
@@ -32,8 +45,13 @@ header>nav {
 nav>button {
   background: none;
   border: none;
-  font-size: 23px;
+  font-size: 26px;
   color: white;
+}
+
+nav>button:hover {
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
 }
 
 nav>button:hover {
@@ -42,9 +60,13 @@ nav>button:hover {
   cursor: pointer;
 }
 
+/* Content */
+
 #content {
   background-color: #00000099;
 }
+
+/* Home Page */
 
 #content.home-page {
   display: flex;
@@ -52,7 +74,7 @@ nav>button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 45px;
+  gap: 25px;
   height: auto;
   min-height: 250px;
   width: 100%;
@@ -67,7 +89,10 @@ nav>button:hover {
 
 #content.home-page>p {
   font-size: 25px;
+  word-spacing: 2px;
 }
+
+/* Menu Page */
 
 #content.menu-page {
   display: grid;
@@ -91,7 +116,7 @@ nav>button:hover {
   background-color: #000000b3;
   padding: 20px;
   height: 100%;
-} 
+}
 
 .menu-item:hover {
   background-color: #63636366;
@@ -113,7 +138,8 @@ nav>button:hover {
   margin-bottom: 15px;
 }
 
-.menu-item img[alt="Coxinha de Frango"], .menu-item img[alt="Xis Salada Gaúcho"] {
+.menu-item img[alt="Coxinha de Frango"],
+.menu-item img[alt="Xis Salada Gaúcho"] {
   object-position: center;
 }
 
@@ -122,6 +148,7 @@ nav>button:hover {
   margin-bottom: 10px;
   line-height: 25px;
   font-size: 19px;
+  word-spacing: 2px;
 }
 
 .menu-item .price {
@@ -137,4 +164,34 @@ nav>button:hover {
 
     padding: 20px;
   }
+}
+
+/* Contact Page */
+
+#content.contact-page {
+  margin-top: 25px;
+  background-color: #000000b8;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 45px;
+  color: white;
+}
+
+.contact-container>h2 {
+  font-size: 30px;
+}
+
+.contact-container>p {
+  font-size: 20px;
+}
+
+.contact-container>img {
+  border: 1px solid #f1c40f;
+  width: 100%;
+  height: auto;
 }

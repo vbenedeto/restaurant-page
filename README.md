@@ -10,4 +10,4 @@ You can view the live site here: **[https://vbenedeto.github.io/restaurant-page/
 * **JavaScript (ES6)** - Logic and dynamic DOM manipulation.
 * **Webpack** - Asset bundling (images, CSS) and module management.
 * **CSS3** - Custom styling with a focus on CSS Grid and Flexbox for responsiveness.
-* **HTML5** - Bare-bones skeleton used as a mounting point for JS.
+* **HTML5** - Built as a Single Page Application (SPA) where JavaScript is responsible for injecting all the UI elements into the page.

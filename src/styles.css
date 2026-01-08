@@ -1,6 +1,140 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  min-height: 100vh;
+  padding-bottom: 50px;
   background-image: url('../assets/feijoada-1.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+header {
+  width: 100%;
+  background-color: #00000099;
+}
+
+header>nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  height: 75px;
+}
+
+nav>button {
+  background: none;
+  border: none;
+  font-size: 23px;
+  color: white;
+}
+
+nav>button:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+
+#content {
+  background-color: #00000099;
+}
+
+#content.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 45px;
+  height: auto;
+  min-height: 250px;
+  width: 100%;
+  padding: 40px 15%;
+  margin-top: 180px;
+  color: white;
+}
+
+#content.home-page>h2 {
+  font-size: 50px;
+}
+
+#content.home-page>p {
+  font-size: 25px;
+}
+
+#content.menu-page {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 370px));
+  grid-template-rows: repeat(3, 1fr);
+  color: white;
+  grid-gap: 25px;
+  padding: 40px;
+  max-width: 1000px;
+  margin-top: 50px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  overflow: hidden;
+  background-color: #000000b3;
+  padding: 20px;
+  height: 100%;
+} 
+
+.menu-item:hover {
+  background-color: #63636366;
+  cursor: pointer;
+}
+
+.menu-item h3 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.menu-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: right;
+  margin-bottom: 15px;
+}
+
+.menu-item img[alt="Coxinha de Frango"], .menu-item img[alt="Xis Salada Gaúcho"] {
+  object-position: center;
+}
+
+.menu-item .info {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  line-height: 25px;
+  font-size: 19px;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: auto;
+}
+
+@media (max-width: 700px) {
+  #content.menu-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    padding: 20px;
+  }
 }
